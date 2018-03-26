@@ -19,7 +19,7 @@ export default {
   name: 'hello',
   data () {
     return {
-      msg: 'Make more time  to study hard !',
+      msg: 'Make more time  to study hard , good good study , day day up!',
       data:{},
     }
   },
