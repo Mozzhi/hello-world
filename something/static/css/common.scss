@@ -1,0 +1,14 @@
+// px转rem
+$rem:1rem;
+@function beRem($number){
+    @return ($number/37.5)*$rem
+}
+
+@mixin background() {
+  background:{
+    repeat:no-repeat;
+    size:cover;
+    position:center;
+  }
+}
+// 
