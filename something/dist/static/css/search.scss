@@ -1,0 +1,46 @@
+@import '../../static/css/common.scss';
+
+.searchtop{
+    height: beRem(45);
+    background:#D43C33;
+    .icons{
+            width:40px;
+            height:46px;
+            color:#fff;
+            .iconfont{
+            font-size:26px;
+            }
+            .icon-clear{
+                font-size:16px;
+            }
+        }
+        .seachbox{
+            padding:8px;
+            input{
+                height:30px;
+                width: 100%;
+                border-radius:4px;
+                padding: 0 10px;
+            }
+        }
+}
+.song-list{
+    background:#fff;
+    li{
+        border-bottom: 1px solid #e1e1e1;
+        text-align:left;
+        font-size:12px;
+        color:#999;
+        padding:5px 0 5px 15px;
+        .song-name{
+            font-size:14px;
+            color:#333;
+            i{
+                color:#D43C33;
+            }
+        }
+        .more{
+            padding:0 10px;
+        }
+    }
+}
