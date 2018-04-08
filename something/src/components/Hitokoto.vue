@@ -1,5 +1,5 @@
 <template>
-    <div class="hitokoto" :style="{'background-image':bgChange}">
+    <div class="hitokoto" :style="{'background-image':bg(bgChange)}">
         <div class="content" @click.stop="getHitokoto();">
             <div class="content-text">
                 <div class="main-text">
@@ -30,13 +30,14 @@
 </template>
 
 <script type="text/javascript">
+
     export default {
         name:"hitokoto",
         data(){
             return {
                 hitokoto:{},
                 hitokotoShow:true,
-                bgChange:'url(../../static/images/1.jpg)'
+                bgChange:require('../../static/images/1.jpg')
             }
         },
         created() {
@@ -51,11 +52,16 @@
                     console.log(res);
                     var id;
                     id = Math.ceil(Math.random()*21);
+                    console.log(id)
                     this.hitokoto = res.data;
                     this.hitokotoShow = true;
-                    this.bgChange = 'url(../../static/images/'+id+'.jpg)';
+                    this.bgChange = require('../../static/images/'+id+'.jpg');
+                    console.log(this.bgChange)
                 })
             },
+            bg(url){
+                return `url(${url})`
+            }
         }
     }
 </script>
